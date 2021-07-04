@@ -9,9 +9,9 @@ import com.axsos.event.shuriken.repositories.UserRepository;
 
 @Service
 public class UserService {
-	 private UserRepository userRepository;
-	    private RoleRepository roleRepository;
-	    private BCryptPasswordEncoder bCryptPasswordEncoder;
+	 private final UserRepository userRepository;
+	    private final RoleRepository roleRepository;
+	    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 	    
 	    public UserService(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder bCryptPasswordEncoder)     {
 	        this.userRepository = userRepository;

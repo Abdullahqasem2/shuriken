@@ -2,7 +2,6 @@ package com.axsos.event.shuriken.controllers;
 
 import java.security.Principal;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -29,20 +28,21 @@ public class UserController {
 
 	@RequestMapping("/registration")
 	public String registerForm(@Valid @ModelAttribute("user") User user) {
-		return "registrationPage.jsp";
+		return "regtest.jsp";
 	}
 
     @PostMapping("/registration")
     public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model) {
         userValidator.validate(user, result);
         if (result.hasErrors()) {
-            return "registrationPage.jsp";
+            return "regtest.jsp";
         }
+//        userService.saveWithUserRole(user);
         userService.saveUserWithAdminRole(user);
         return "redirect:/login";
     }
 
-	@RequestMapping(value = { "/", "/home" })
+	@RequestMapping(value = { "/home" })
 	public String home(Principal principal, Model model) {
 		// 1
 		String username = principal.getName();
@@ -59,13 +59,23 @@ public class UserController {
 		if (logout != null) {
 			model.addAttribute("logoutMessage", "Logout Successful!");
 		}
-		return "loginPage.jsp";
+		return "logtest.jsp";
 	}
 
 	@RequestMapping("/admin")
 	public String adminPage(Principal principal, Model model) {
 		String username = principal.getName();
-		model.addAttribute("currentUser", userService.findByUsername(username));
+		model.addAttribute("currentUser", userService.findByUsername(username).getUsername());
 		return "adminPage.jsp";
 	}
+	
+	@RequestMapping("/")
+	public String index() {
+		return "index.jsp";
+	}
+	@RequestMapping("/contact")
+	public String contact() {
+		return "contact.jsp";
+	}
+	
 }
