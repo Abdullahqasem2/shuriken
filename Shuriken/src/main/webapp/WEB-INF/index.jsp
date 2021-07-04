@@ -60,18 +60,18 @@
 				</a>
 				<nav class="top-nav-area w-100">
 					<div class="user-panel">
-						<a href="login.html">Login</a> / <a href="review.html">Register</a>
+						<a href="/login">Login</a> / <a href="/registration">Register</a>
 					</div>
 					<!-- Menu -->
 					<ul class="main-menu primary-menu">
 						<li><a href="/">Home</a></li>
-						<li><a href="games.html">Games</a>
+						<li><a href="/games">Games</a>
 							<ul class="sub-menu">
-								<li><a href="game-single.html">Connect To Server</a></li>
+								<li><a href="">Connect To Server</a></li>
 							</ul></li>
 						<!-- 						<li><a href="review.html">Reviews</a></li>
  -->
-						<li><a href="blog.html">News</a></li>
+						<li><a href="/news">News</a></li>
 						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -122,7 +122,7 @@
 				<div class="col-md-4">
 					<div class="intro-text-box text-box text-white">
 						<div class="top-meta">
-							11.11.18 / in <a href="">Games</a>
+							11.11.18 / in <a href="/games">Games</a>
 						</div>
 						<h3>The best online game is out now!</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -184,7 +184,7 @@
 							<img src="./img/blog/1.jpg" alt="">
 						</div>
 						<div class="blog-text text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
+							<div class="top-meta">11.11.18  /  in <a href="/games">Games</a></div>
 							<h3>The best online game is out now!</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
 							<a href="#" class="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#"/></a>
@@ -196,7 +196,7 @@
 							<img src="./img/blog/2.jpg" alt="">
 						</div>
 						<div class="blog-text text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
+							<div class="top-meta">11.11.18  /  in <a href="/games">Games</a></div>
 							<h3>The best online game is out now!</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
 							<a href="#" class="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#"/></a>
@@ -208,7 +208,7 @@
 							<img src="./img/blog/3.jpg" alt="">
 						</div>
 						<div class="blog-text text-box text-white">
-							<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
+							<div class="top-meta">11.11.18  /  in <a href="/games">Games</a></div>
 							<h3>The best online game is out now!</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
 							<a href="#" class="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#"/></a>
@@ -225,7 +225,7 @@
 										<img src="./img/blog-widget/1.jpg" alt="#">
 									</div>
 									<div class="tw-text">
-										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<div class="tw-meta">11.11.18  /  in <a href="/games">Games</a></div>
 										<h5>The best online game is out now!</h5>
 									</div>
 								</div>
@@ -234,7 +234,7 @@
 										<img src="./img/blog-widget/2.jpg" alt="#">
 									</div>
 									<div class="tw-text">
-										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<div class="tw-meta">11.11.18  /  in <a href="/games">Games</a></div>
 										<h5>The best online game is out now!</h5>
 									</div>
 								</div>
@@ -243,7 +243,7 @@
 										<img src="./img/blog-widget/3.jpg" alt="#">
 									</div>
 									<div class="tw-text">
-										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<div class="tw-meta">11.11.18  /  in <a href="/games">Games</a></div>
 										<h5>The best online game is out now!</h5>
 									</div>
 								</div>
@@ -252,7 +252,7 @@
 										<img src="./img/blog-widget/4.jpg" alt="#">
 									</div>
 									<div class="tw-text">
-										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<div class="tw-meta">11.11.18  /  in <a href="/games">Games</a></div>
 										<h5>The best online game is out now!</h5>
 									</div>
 								</div>
@@ -262,7 +262,7 @@
 							<div class="categories-widget">
 								<h4 class="widget-title">categories</h4>
 								<ul>
-									<li><a href="">Games</a></li>
+									<li><a href="/games">Games</a></li>
 									<li><a href="">Gaming Tips & Tricks</a></li>
 									<li><a href="">Online Games</a></li>
 									<li><a href="">Team Games</a></li>
@@ -307,7 +307,7 @@
 		<div class="featured-box">
 			<div class="text-box">
 				<div class="top-meta">
-					11.11.18 / in <a href="">Games</a>
+					11.11.18 / in <a href="/games">Games</a>
 				</div>
 				<h3>The game you’ve been waiting for is out now</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -378,9 +378,9 @@
 			</a>
 			<ul class="main-menu footer-menu">
 				<li><a href="/">Home</a></li>
-				<li><a href="">Games</a></li>
+				<li><a href="games">Games</a></li>
 				<li><a href="">Reviews</a></li>
-				<li><a href="">News</a></li>
+				<li><a href="/news">News</a></li>
 				<li><a href="/contact">Contact</a></li>
 			</ul>
 			<div class="footer-social d-flex justify-content-center">

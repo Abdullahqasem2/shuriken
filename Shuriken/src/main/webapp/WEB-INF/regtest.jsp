@@ -66,7 +66,7 @@
 					<!-- Menu -->
 					<ul class="main-menu primary-menu">
 						<li><a href="/">Home</a></li>
-						<li><a href="games.html">Games</a>
+						<li><a href="/games">Games</a>
 							<ul class="sub-menu">
 								<li><a href="game-single.html">Game Singel</a></li>
 							</ul></li>
@@ -153,7 +153,7 @@
 			</a>
 			<ul class="main-menu footer-menu">
 				<li><a href="/">Home</a></li>
-				<li><a href="">Games</a></li>
+				<li><a href="/games">Games</a></li>
 				<!-- <li><a href="">Reviews</a></li> -->
 				<li><a href="">News</a></li>
 				<li><a href="/contact">Contact</a></li>

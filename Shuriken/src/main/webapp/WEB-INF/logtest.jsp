@@ -63,13 +63,13 @@
 					<!-- Menu -->
 					<ul class="main-menu primary-menu">
 						<li><a href="/">Home</a></li>
-						<li><a href="games.html">Games</a>
+						<li><a href="/games">Games</a>
 							<ul class="sub-menu">
-								<li><a href="game-single.html">Game Singel</a></li>
+								<li><a href="/game">Game Singel</a></li>
 							</ul>
 						</li>
 						<!-- <li><a href="review.html">Reviews</a></li> -->
-						<li><a href="blog.html">News</a></li>
+						<li><a href="/news">News</a></li>
 						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -104,7 +104,10 @@
 				<input type="password" placeholder="ENTER YOUR PASSWORD" name="password">
 				<br>
 				<br>
+				<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
 				<button type="submit" class="site-btn">login<img src="img/icons/double-arrow.png" alt="#"/></button>|||||||||<a href="/registration" class="site-btn">sign up<img src="img/icons/double-arrow.png"/></a>
+				
 			</form>
 			<br>
 			<br>
@@ -145,9 +148,9 @@
 			</a>
 			<ul class="main-menu footer-menu">
 				<li><a href="/">Home</a></li>
-				<li><a href="">Games</a></li>
+				<li><a href="/games">Games</a></li>
 				<!-- <li><a href="">Reviews</a></li> -->
-				<li><a href="">News</a></li>
+				<li><a href="/news">News</a></li>
 				<li><a href="/contact">Contact</a></li>
 			</ul>
 			<div class="footer-social d-flex justify-content-center">

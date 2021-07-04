@@ -78,4 +78,17 @@ public class UserController {
 		return "contact.jsp";
 	}
 	
+	@RequestMapping("/news")
+	public String news() {
+		return "news.jsp";
+	}
+	@RequestMapping("/game")
+	public String playGame() {
+		return "games.jsp";
+	}
+	
+	@RequestMapping("/games")
+	public String allGames() {
+		return "allgames.jsp";
+	}
 }
