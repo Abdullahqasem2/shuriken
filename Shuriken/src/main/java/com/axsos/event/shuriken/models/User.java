@@ -39,7 +39,7 @@ public class User {
 	private String username;
 	@Email
 	private String email;
-	@Min(13)
+//	@Min(13)
 	private int age;
 	@Size(min=8,max=64,message="password must be between 8-64 characters.")
 	private String password;
@@ -189,11 +189,7 @@ public class User {
 	}
 	
 	// when the user hit the add friend will activate this method
-	public void addFriend(User friend) {
-		if(!userFriends.contains(friend)) {
-			userFriends.add(friend);
-		}
-	}
+	
 	
 	public void setUserFriends(List<User> userFriends) {
 		this.userFriends = userFriends;

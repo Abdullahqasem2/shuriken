@@ -1,5 +1,6 @@
 package com.axsos.event.shuriken.controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -27,16 +28,20 @@ public class GameController {
 	}
 	
 	@GetMapping("/profile")
-	public String userProfile(HttpSession session, Model model) {
-		Long user_id = (Long) session.getAttribute("id");
-		User user = this.userService.findUserById(user_id);
+	public String userProfile(HttpSession session, Model model,Principal principal) {
+		String user_name = principal.getName();
+		User user = this.userService.findByUsername(user_name);
+		session.setAttribute("id", user.getId());
+		List<Friendship> friends = this.userService.findAllUserFriend(user);
 		model.addAttribute("user", user);
-//		model.addAttribute("friends", this.userService.findAllFriendship(user));
+		model.addAttribute("friends", friends);
 		model.addAttribute("games", this.userService.findAllGames());
+		model.addAttribute("users", this.userService.findAllUsers());
 		return "userProfile.jsp";
 	}
 	@GetMapping("/avatar")
-	public String Avatar(HttpSession session, Model model) {
+	public String Avatar(HttpSession session, Model model,Principal principal) {
+
 		Long user_id = (Long) session.getAttribute("id");
 		User user = this.userService.findUserById(user_id);
 		model.addAttribute("user", user);
@@ -53,27 +58,23 @@ public class GameController {
 		this.userService.updateUser(user);
 		return "redirect:/profile";
 	}
-//	@GetMapping("/friend/{id}")
-//	public String friend(@PathVariable("id") Long id,HttpSession session, Model model) {
-//		Long user_id = (Long) session.getAttribute("id");
-//		User user = this.userService.findUserById(user_id);
-//		User selectedFriend = this.userService.findUserById(id);
-////		if(this.userService.friendStatus(user, selectedFriend) != null) {
-////			List<Friendship> friendShip = this.userService.friendStatus(user, selectedFriend);
-//			if(friendShip.size() == 2) {
-//				Friendship friend = friendShip.get(0);
-//				Friendship userFriends = friendShip.get(1);
-//				model.addAttribute("friend", friend);
-//				model.addAttribute("userFriends", userFriends);
-//			}
-//			else {
-//				Friendship friend = friendShip.get(0);
-//				model.addAttribute("friend", friend);
-//			}
-//			
-//		}
-//		model.addAttribute("user", user);
-//		return "friend.jsp";
-//	}
 
+	@GetMapping("/addFriend/{id}")
+	public String appendFriend(@PathVariable("id")Long id,HttpSession session) {
+		Long user_id = (Long) session.getAttribute("id");
+		User user = this.userService.findUserById(user_id);
+		User friend = this.userService.findUserById(id);
+		this.userService.addFriend(user, friend);
+		return "redirect:/profile";
+		
+	}
+	
+	@GetMapping("/acceptFriend/{id}")
+	public String acceptFriendRequest(@PathVariable("id")Long id,HttpSession session) {
+		Long user_id = (Long) session.getAttribute("id");
+		User user = this.userService.findUserById(user_id);
+		User friend = this.userService.findUserById(id);
+		this.userService.acceptFriend(user, friend);
+		return "redirect:/profile";
+	}
 }

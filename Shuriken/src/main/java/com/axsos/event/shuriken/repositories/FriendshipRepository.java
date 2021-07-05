@@ -9,5 +9,6 @@ import com.axsos.event.shuriken.models.User;
 
 public interface FriendshipRepository extends CrudRepository<Friendship, Long>{
 	Friendship findByUserAndFriend(User user,User friend);//the list size = 2
+	List<Friendship> findByUser(User user);
 	
 }

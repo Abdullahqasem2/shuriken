@@ -29,14 +29,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				.antMatchers("/css/**", "/js/**", "/img/**", "/icon-fonts/**", "/Source/**", "/registration", "/",
 						"/contact")
-				.permitAll().antMatchers("/admin/**").access("hasRole('ADMIN')").anyRequest().authenticated().and()
-				.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+				.permitAll().antMatchers("/admin/**").access("hasRole('ADMIN')")
+				.anyRequest().authenticated()
+				.and()
+				.formLogin()
+					.loginPage("/login")
+					.defaultSuccessUrl("/main")
+					.permitAll().and().logout().permitAll();
 
 	}
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
+//		auth.getObject().getClass().getFields();
+
+//		System.out.println(auth.getObject().getClass().getFields());
 	}
 
 }

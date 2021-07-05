@@ -57,25 +57,34 @@ public class UserService {
 			return this.userRepository.save(user);
 		}
 		
-//		public List<Friendship> friendStatus(User user, User friend) {
-//			if(this.friendshipRepository.findByUserAndFriend(user, friend) == null) {
-//				return null;
-//			}
-//			return this.friendshipRepository.findByUserAndFriend(user, friend);
-//		}
-		
-		//this method to add friends on clike add friend
-		
-		public void addFriend(User user,User friend) {
-			user.addFriend(friend);
-			this.userRepository.save(user);
-		}
 		
 		//this method to add friends on clike add friend
 		public void acceptFriend(User user,User friend) {
-			Friendship friendship = this.friendshipRepository.findByUserAndFriend(user, friend);
-			friendship.setRequest(true);
-			this.friendshipRepository.save(friendship);
+			this.addFriend(user, friend);
+			Friendship friendship1 = this.friendshipRepository.findByUserAndFriend(user, friend);
+			friendship1.setRequest(true);
+			this.friendshipRepository.save(friendship1);
+			Friendship friendship2 = this.friendshipRepository.findByUserAndFriend(friend, user);
+			friendship2.setRequest(true);
+			this.friendshipRepository.save(friendship2);
+			
+		}
+		
+		public List<Friendship> findAllUserFriend(User user){
+			return this.friendshipRepository.findByUser(user);
+		}
+		public List<User> findAllUsers(){
+			return this.userRepository.findAll();
+		}
+		
+		public void addFriend(User user,User friend) {
+			if(!user.getUserFriends().contains(friend)) {
+				user.getUserFriends().add(friend);
+				
+				
+			}
+		
+			this.userRepository.save(user);
 		}
 	     
 	     // 2 

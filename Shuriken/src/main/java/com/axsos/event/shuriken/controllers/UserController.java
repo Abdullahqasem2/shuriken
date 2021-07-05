@@ -4,6 +4,8 @@ import java.security.Principal;
 
 import javax.validation.Valid;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -65,11 +67,11 @@ public class UserController {
 	@RequestMapping("/admin")
 	public String adminPage(Principal principal, Model model) {
 		String username = principal.getName();
-		model.addAttribute("currentUser", userService.findByUsername(username).getUsername());
+		model.addAttribute("currentUser", userService.findByUsername(username));
 		return "adminPage.jsp";
 	}
 	
-	@RequestMapping("/")
+	@RequestMapping("/main")
 	public String index() {
 		return "index.jsp";
 	}
