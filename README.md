@@ -21,30 +21,32 @@ when the user click on a geme he will be directed to the game station page to pl
 - Using Spring Security
     - The system shall display a registration form where the user should provide the following information: name, email, password, confirm password, type of subscription Gold or       Conker (additional payment is required).
 - Using cloud gaming concept
-- The user shall play the selected game in our server throw our website by clicking in the game file then entering the provided password.
+   - The user shall play the selected game in our server throw our website by clicking in the game file then entering the provided password.
 - Using WebSocut protocol
-- The users shall communicate with each other in the general chat 
+   - The users shall communicate with each other in the general chat 
 - Website Community
-- The user shall post and comment and reply in our community page.
-- The user can be friend with other users by sending and accepting friend request.
+  - The user shall post and comment and reply in our community page.
+  - The user can be friend with other users by sending and accepting friend request.
 - Website Admin
-  - - The admin shall add game related news in the news page to be displayed for the users.
-  - - The admin shall add new games in the website.
-YouTube API
-The website shall display some of the games videos.
+   - The admin shall add game related news in the news page to be displayed for the users.
+   - The admin shall add new games in the website.
+- YouTube API
+   - The website shall display some of the games videos.
  
-Technologies Used
-Spring boot  - Java Framework
-Maven - Dependency Management
-Bootstrap, CSS, JS.
-WebSocut - computer communications protocol.
-Google API  - google map and YouTube.
-Screenshots
+## Technologies Used
+- Spring boot  - Java Framework
+- Maven - Dependency Management
+- Bootstrap, CSS, JS.
+- WebSocut - computer communications protocol.
+- Google API  - google map and YouTube.
+# Screenshots
+![test](https://github.com/Abdullahqasem2/shuriken/blob/master/Shuriken/src/main/resources/static/img/slider-bg-1.jpg)
 
-Authors
-Tamara Adeeb
-Abdallah Qassem
-Tariq 
+
+# Authors
+- Tamara Adeeb
+- Abdallah Qassem
+- Tariq 
 
 
 
@@ -57,4 +59,3 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-![test](https://github.com/Abdullahqasem2/shuriken/blob/master/Shuriken/src/main/resources/static/img/slider-bg-1.jpg)
