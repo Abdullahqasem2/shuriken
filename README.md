@@ -41,6 +41,8 @@ when the user click on a geme he will be directed to the game station page to pl
 - Google API  - google map and YouTube.
 # Screenshots
 ![test](https://github.com/Abdullahqasem2/shuriken/blob/master/Shuriken/src/main/resources/static/img/slider-bg-1.jpg)
+![contact](https://raw.githubusercontent.com/Abdullahqasem2/shuriken/master/home%20page%201.PNG)
+![youtube](https://github.com/Abdullahqasem2/shuriken/blob/master/youtube%20api.PNG)
 
 
 # Authors
