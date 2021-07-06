@@ -4,12 +4,6 @@
 During the high requirement that the updates and the high price of the games that the gaming community asking for we will provide shuriken website that allow you to play the heaviest games that requires a high quality and costly computers on your old and cheap laptop just using your screen. Our subscription will be cheap, the quality will be high and you will not download any game on your pc.
 
 
-
-## FUNCTIONAL REQUIRMENT:
-In the home page, we will include a clickable  navbar that will display the home, about us and contact us.
-About us : will go to the about us  page.
-Contact us: go to the send us email part in the home page.
-
 ## User Authentication And Authorization:
 The system shall display a registration link in the login page to register if the
 user doesn’t already have an account.
@@ -23,27 +17,35 @@ when the user click on a geme he will be directed to the game station page to pl
  In Game station the system shell display game board using an external API to allow the user play the selected game and it will contain an exit button when user click on it he will be redirect to the profile page.
 
 
-## Functional Requirements
+## General Information
+- Using Spring Security
+    - The system shall display a registration form where the user should provide the following information: name, email, password, confirm password, type of subscription Gold or       Conker (additional payment is required).
+- Using cloud gaming concept
+- The user shall play the selected game in our server throw our website by clicking in the game file then entering the provided password.
+- Using WebSocut protocol
+- The users shall communicate with each other in the general chat 
+- Website Community
+- The user shall post and comment and reply in our community page.
+- The user can be friend with other users by sending and accepting friend request.
+- Website Admin
+  - - The admin shall add game related news in the news page to be displayed for the users.
+  - - The admin shall add new games in the website.
+YouTube API
+The website shall display some of the games videos.
+ 
+Technologies Used
+Spring boot  - Java Framework
+Maven - Dependency Management
+Bootstrap, CSS, JS.
+WebSocut - computer communications protocol.
+Google API  - google map and YouTube.
+Screenshots
 
-1. Registration Page: * During the registration process the user shall provide his basic information. * The provided information will be used in log in page.
+Authors
+Tamara Adeeb
+Abdallah Qassem
+Tariq 
 
-2. Login Page: * The user will login using his name and password then he will be able to   view all the games available  once he is login.
-
-3. games must be playable on server from the game page.
-
-4. the user will be able to send friend request  add friend and accept friend request.
-
-5. there will be a general chat where all user can send massages and see it.
-
-
-
-## Built With
-- JavaScript
-- HTML
-- CSS
-- bootstrap
-- websocket
-- google api :google maps,youtube
 
 
 
